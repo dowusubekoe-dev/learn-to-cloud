@@ -51,75 +51,56 @@ To use Terraform you will need to install it. HashiCorp distributes Terraform as
 For this project, an Ubuntu server will be used as the control machine.
 
 1. Verify HashiCorp's GPG signature and install HashiCorp's Debian package repo
-
-`sudo apt-get update && sudo apt-get install -y gnupg software-properties-common`
-
+```bash
+sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
+```
 
 2. Install the HashiCorp [GPG key](https://apt.releases.hashicorp.com/gpg)
-
-
-    ```bash
-    wget -O- https://apt.releases.hashicorp.com/gpg | \
-    gpg --dearmor | \
-    sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg > /dev/null
-    ```
-
+```bash
+wget -O- https://apt.releases.hashicorp.com/gpg | \
+gpg --dearmor | \
+sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg > /dev/null
+```
 
 3. Verify the key's fingerprint.
-
-
-    ```bash
-    gpg --no-default-keyring \
-    --keyring /usr/share/keyrings/hashicorp-archive-keyring.gpg \
-    --fingerprint
-    ```
-
+ ```bash
+gpg --no-default-keyring \
+--keyring /usr/share/keyrings/hashicorp-archive-keyring.gpg \
+--fingerprint
+```
 
 4. Add the official HashiCorp repository to your system.
-
-
-    ```bash
-    echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] \
-    https://apt.releases.hashicorp.com $(lsb_release -cs) main" | \
-    sudo tee /etc/apt/sources.list.d/hashicorp.list
-    ```
-
+```bash
+echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] \
+https://apt.releases.hashicorp.com $(lsb_release -cs) main" | \
+sudo tee /etc/apt/sources.list.d/hashicorp.list
+```
 
 5. Download the package information from HashiCorp.
-
-        ```bash
-        sudo apt update
-        ```
-
+```bash
+sudo apt update
+```
 
 6. Install Terraform from the new repository.
-
-        ```bash
-        sudo apt-get install terraform
-        ```
-
+```bash
+sudo apt-get install terraform
+```
 
 7. Verify that the installation worked
+```bash
+terraform -help
+```
 
-        ```bash
-        terraform -help
-        ```
-
-    *Troubleshoot: If you get an error that terraform could not be found, your PATH environment variable was not set up properly. Please go back and ensure that your PATH variable contains the directory where Terraform was installed*
-
-
+*Troubleshoot: If you get an error that terraform could not be found, your PATH environment variable was not set up properly. Please go back and ensure that your PATH variable contains the directory where Terraform was installed*
 
 8. Enable tab completion
+```bash
+touch ~/.bashrc
+```
 
-        ```bash
-        touch ~/.bashrc
-        ```
-
-
-        ```bash
-        terraform -install-autocomplete
-        ```
-
+```bash
+terraform -install-autocomplete
+```
 
 ## Resources
 
