@@ -25,15 +25,17 @@ Terraform's configuration language is declarative (describes the desired end-sta
 
 To deploy infrastructure with Terraform:
 
-    - **Scope** - Identify the infrastructure for your project.
-    - **Author** - Write the configuration for your infrastructure.
-    - **Initialize** - Install the plugins Terraform needs to manage the infrastructure.
-    - **Plan** - Preview the changes Terraform will make to match your configuration.
-    - **Apply** - Make the planned changes.
+- **Scope** - Identify the infrastructure for your project.
+- **Author** - Write the configuration for your infrastructure.
+- **Initialize** - Install the plugins Terraform needs to manage the infrastructure.
+- **Plan** - Preview the changes Terraform will make to match your configuration.
+- **Apply** - Make the planned changes.
+
 
 ## Track your infrastructure
 
 Terraform keeps track of your real infrastructure in a state file. Terraform uses the state file to determine the changes that needs to be made to the infrastructure so that it matches the configuration.
+
 
 ## Collaborate
 
