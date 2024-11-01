@@ -102,8 +102,89 @@ touch ~/.bashrc
 terraform -install-autocomplete
 ```
 
+## Terraform Basic Commands
+
+1. Initialize the directory
+Initializing a configuration directory downloads and installs the providers defined in the configuration.
+
+```hcl
+terraform init
+```
+
+2. Format and validate the configuration
+The **terraform fmt** command automatically updates configurations in the current directory for readability and consistency.
+
+```hcl
+terraform fmt
+```
+
+3. Create infrastructure
+Apply the configuration now with the terraform apply command.
+
+```hcl
+terraform apply
+```
+
+4. Inspect the current state using 
+```hcl
+terraform show
+```
+
+5. Validate Command
+This command validates the configuration files in a directory. Validate runs checks that verify whether a configuration is syntactically valid and internally consistent, regardless of any provided variables or existing state.
+```hcl
+terraform validate
+```
+
+6. Plan Your Infrastructure
+Plan will generate an execution plan.
+```hcl
+terraform plan
+```
+Save the plan file to a given path.
+```hcl
+terraform plan -out=<path>
+```
+Create a plan to destroy all objects rather than the usual actions.
+```hcl
+terraform plan -destroy
+```
+
+7. Deploy Infrastructure
+Create or update infrastructure depending on the configuration files.
+```hcl
+terraform apply
+```
+Apply changes without having to interactively type ‘yes’ to the plan. Useful in automation CI/CD pipelines.
+```hcl
+terraform apply -auto-approve
+```
+
+8. Destroy Infrastructure
+Destroy the infrastructure managed by Terraform.
+```hcl
+terraform destroy
+```
+Destroy the infrastructure without having to interactively type ‘yes’ to the plan. Useful in automation CI/CD pipelines.
+```hcl
+terraform destroy --auto-approve
+```
+
+9. Refresh the State File
+Modify the state file with updated metadata containing information on the resources being managed in Terraform.
+```hcl
+terraform refresh
+```
+
+## Inspect state
+When you applied your configuration, Terraform wrote data into a file called **terraform.tfstate**. Terraform stores the IDs and properties of the resources it manages in this file, so that it can update or destroy those resources going forward. The **state file** must be stored securely and access should be restrict to only trusted team members who need to manage the infrastructure.
+
+
+
 ## Resources
 
 1. [Install Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+
+2. [Terraform Cheat Sheet](https://spacelift.io/blog/terraform-commands-cheat-sheet)
 
 
