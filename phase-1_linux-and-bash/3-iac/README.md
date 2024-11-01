@@ -43,3 +43,59 @@ Terraform allows collaborate on the infrastructure with its remote state backend
 
 You can also connect HCP Terraform to version control systems like GitHub, GitLab, which allow it to automatically propose infrastructure changes when a commit is made on the configuration changes to VCS.
 
+
+## Install Terraform
+
+To use Terraform you will need to install it. HashiCorp distributes Terraform as a [binary package](https://developer.hashicorp.com/terraform/install). Terraform can also be installed by using popular package managers.
+
+For this project, an Ubuntu server will be used as the control machine.
+
+1. Verify HashiCorp's GPG signature and install HashiCorp's Debian package repo
+
+`sudo apt-get update && sudo apt-get install -y gnupg software-properties-common`
+
+2. Install the HashiCorp [GPG key](https://apt.releases.hashicorp.com/gpg)
+
+`wget -O- https://apt.releases.hashicorp.com/gpg | \
+gpg --dearmor | \
+sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg > /dev/null
+`
+3. Verify the key's fingerprint.
+
+`gpg --no-default-keyring \
+--keyring /usr/share/keyrings/hashicorp-archive-keyring.gpg \
+--fingerprint
+`
+4. Add the official HashiCorp repository to your system.
+
+`echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] \
+https://apt.releases.hashicorp.com $(lsb_release -cs) main" | \
+sudo tee /etc/apt/sources.list.d/hashicorp.list
+`
+5. Download the package information from HashiCorp.
+
+`sudo apt update`
+
+6. Install Terraform from the new repository.
+
+`sudo apt-get install terraform`
+
+7. Verify that the installation worked
+
+`terraform -help`
+
+**Troubleshoot**
+
+If you get an error that terraform could not be found, your PATH environment variable was not set up properly. Please go back and ensure that your PATH variable contains the directory where Terraform was installed.
+
+8. Enable tab completion
+
+`touch ~/.bashrc`
+`terraform -install-autocomplete`
+
+
+## Resources
+
+1. [Install Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+
+
