@@ -29,6 +29,19 @@
 `git config --list`
 
 
+### Basic Git Commands
+
+1. **git status**: displays the state of the working tree and changes that are currently being tracked by Git.
+
+2. **git add**: is used to notify Git to start keeping track of changes in certain files.
+
+3. **git commit**: command to invoke the stagged changes to a database in Git.
+
+4. **git log**: allow users to see information about previous commits.
+
+5. **git help**: help with getting information about all commands in Git.
+
+
 ### Challenges
 
 - Git push command generated an error `failed to push some refs error'
