@@ -64,6 +64,7 @@ For this project, an Ubuntu server will be used as the control machine.
     sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg > /dev/null
     ```
 
+
 3. Verify the key's fingerprint.
 
 
@@ -72,6 +73,7 @@ For this project, an Ubuntu server will be used as the control machine.
     --keyring /usr/share/keyrings/hashicorp-archive-keyring.gpg \
     --fingerprint
     ```
+
 
 4. Add the official HashiCorp repository to your system.
 
@@ -85,28 +87,38 @@ For this project, an Ubuntu server will be used as the control machine.
 
 5. Download the package information from HashiCorp.
 
-`sudo apt update`
+        ```bash
+        sudo apt update
+        ```
 
 
 6. Install Terraform from the new repository.
 
-`sudo apt-get install terraform`
+        ```bash
+        sudo apt-get install terraform
+        ```
 
 
 7. Verify that the installation worked
 
-`terraform -help`
+        ```bash
+        terraform -help
+        ```
 
+    *Troubleshoot: If you get an error that terraform could not be found, your PATH environment variable was not set up properly. Please go back and ensure that your PATH variable contains the directory where Terraform was installed*
 
-**Troubleshoot**
-
-If you get an error that terraform could not be found, your PATH environment variable was not set up properly. Please go back and ensure that your PATH variable contains the directory where Terraform was installed.
 
 
 8. Enable tab completion
 
-`touch ~/.bashrc`
-`terraform -install-autocomplete`
+        ```bash
+        touch ~/.bashrc
+        ```
+
+
+        ```bash
+        terraform -install-autocomplete
+        ```
 
 
 ## Resources
