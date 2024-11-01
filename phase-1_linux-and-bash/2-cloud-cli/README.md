@@ -52,11 +52,13 @@ CLIs can be used to run programs, manage files, and interact with the computer.
 ## Install AWS Command Line Interface
 
 To install the AWS CLI, run the following commands.
-    `sudo curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"`
-    `sudo unzip awscliv2.zip`
-    `sudo ./aws/install`
+
+`sudo curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"`
+`sudo unzip awscliv2.zip`
+`sudo ./aws/install`
 
 And to install it locally.
+
 `sudo curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"`
 `sudo unzip awscliv2.zip`
 `sudo ./aws/install --bin-dir /usr/local/bin --install-dir /usr/local/aws-cli --update`
