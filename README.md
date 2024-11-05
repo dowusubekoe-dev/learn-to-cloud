@@ -2,7 +2,7 @@
 
 ## Learn to Cloud Project
 
-### [Phase 0: Starting from Zero](./phase-0_start-from-zero)
+### [Phase 0: Starting from Zero](./phase-0_starting-from-zero)
 
 ### [Phase 1: Linux and Bash](./phase-1_linux-and-bash)
 
