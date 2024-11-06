@@ -168,9 +168,44 @@ Implementing this will help secure SSH access to only specified IP addresses, si
 Your CTF lab consists of 7 challenges, each testing different Linux command line skills. The challenges are:
 
 1. Find a hidden file
+
+```bash
+ls -a
+```
+
 2. Locate a file with "secret" in its name
+
+```bash
+find / -type f -name "*secret*"
+```
+
 3. Find the largest file in a specific directory
+
+```bash
+find home/ec2-user/ctf_challenges -type f -exec du -h {} + | sort -rh | head -n 1
+```
+OR
+
+```bash
+ls -lhs home/ec2-user/ctf_challenges | head -n 1
+```
+
 4. Identify a user with a specific UID
+
+```bash
+cat /etc/passwd
+```
+
+```bash
+Output
+ec2-user:x:1000:1000:EC2 Default User:/home/ec2-user:/bin/bash
+ctf_user:x:1001:1001::/home/ctf_user:/bin/bash
+```
+
+```bash
+cat /etc/passwd | grep ":1000"
+```
+
 5. Locate a file with specific permissions
 6. Find a process running on a specific port
 7. Decode a base64 encoded message
