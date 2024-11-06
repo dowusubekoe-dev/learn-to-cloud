@@ -3,7 +3,13 @@
 variable "aws_region" {
   description = "The AWS region to deploy the CTF lab"
   type        = string
-  default     = "us-east-1"  # Default region if not specified
+# Default region if not specified
+}
+
+variable "trusted_ip" {
+  description = "The IP address or CIDR block allowed to access SSH"
+  type        = string
+  default     = "72.184.194.75/32"  # Replace with your IP or update via `terraform.tfvars`
 }
 
 # Configure the AWS Provider with the variable region
@@ -69,7 +75,7 @@ resource "aws_security_group" "ctf_sg" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = [var.trusted_ip]
   }
 
   egress {
@@ -104,12 +110,11 @@ resource "aws_instance" "ctf_instance" {
   ami           = data.aws_ami.amazon_linux_2.id  # Amazon Linux 2 AMI (HVM) - Kernel 5.10, SSD Volume Type
   instance_type = "t2.micro"
   # Remove the key_name attribute
+  key_name      = "aws_login"
 
   vpc_security_group_ids = [aws_security_group.ctf_sg.id]
   subnet_id              = aws_subnet.ctf_subnet.id
-
   associate_public_ip_address = true
-
   user_data = data.template_file.user_data.rendered
 
   tags = {
