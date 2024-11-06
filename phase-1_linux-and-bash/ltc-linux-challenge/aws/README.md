@@ -163,7 +163,6 @@ Implementing this will help secure SSH access to only specified IP addresses, si
 *.pem
 ```
 
-
 ## Challenges
 
 Your CTF lab consists of 7 challenges, each testing different Linux command line skills. The challenges are:
