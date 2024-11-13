@@ -3,7 +3,7 @@
 ## Python Crush Course
 
 
-### [Part I: Basics](./phase-2_programming/part-i_basics)
+### [Part I: Basics](./phase-2_programming/python-crush-course/part-i_basics)
 
 
 #### Using the VSCode Editor
