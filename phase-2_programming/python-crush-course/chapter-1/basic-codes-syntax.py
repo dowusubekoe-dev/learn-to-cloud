@@ -2,7 +2,7 @@ Here's a comprehensive list of 100 simple Python scripts covering each of the re
 
 ---
 
-### **1-20: Basic Data Types and Variables**
+### **Basic Data Types and Variables**
 
 1. **Define integers, floats, and strings.**
     ```python
@@ -112,7 +112,7 @@ Here's a comprehensive list of 100 simple Python scripts covering each of the re
 
 ---
 
-### **21-40: Simple I/O Operations**
+### **Simple I/O Operations**
 
 21. **Print a welcome message.**
     ```python
@@ -241,7 +241,7 @@ Here's a comprehensive list of 100 simple Python scripts covering each of the re
 
 ---
 
-### **41-60: Comments and Documentation**
+### **Comments and Documentation**
 
 41. **Single-line comment.**
     ```python
@@ -265,11 +265,8 @@ Here's a comprehensive list of 100 simple Python scripts covering each of the re
 
 ---
 
-Great! Here’s the continuation, covering **Basic Mathematical Operations** and **String Formatting**.
 
----
-
-### **61-80: Basic Mathematical Operations**
+### **Basic Mathematical Operations**
 
 61. **Add two numbers.**
     ```python
@@ -397,7 +394,7 @@ Great! Here’s the continuation, covering **Basic Mathematical Operations** and
 
 ---
 
-### **81-100: String Formatting**
+### **String Formatting**
 
 81. **Format a string using the `+` operator.**
     ```python
