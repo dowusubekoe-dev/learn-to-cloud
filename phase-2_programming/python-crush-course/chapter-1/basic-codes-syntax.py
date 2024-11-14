@@ -265,7 +265,6 @@ Here's a comprehensive list of 100 simple Python scripts covering each of the re
 
 ---
 
-
 ### **Basic Mathematical Operations**
 
 61. **Add two numbers.**
