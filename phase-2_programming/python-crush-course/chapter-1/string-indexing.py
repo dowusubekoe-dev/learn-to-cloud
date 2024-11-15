@@ -2,6 +2,6 @@
 
 word = 'Python'
 
-print(word[0])  # character position 0
+print(word[0])  # character in position 0
 
-print(word[5])  # second-last character
+print(word[5])  # character in position 5
