@@ -79,3 +79,14 @@ Naming **variables** involves some rules that needs to be followed.
    message = 'Python's strengths'
    # Produces a SyntaxError
    ```
+
+## Numbers
+Integer: Whole numbers, e.g., 2, 10.
+Float: Decimal numbers, e.g., 3.14, 0.5.
+Arithmetic Operators:
++: Addition
+-: Subtraction
+*: Multiplication
+/: Division (always returns a float)
+**: Exponentiation
+ %: Modulus (remainder)
