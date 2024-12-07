@@ -7,16 +7,16 @@ This project involves setting up a scalable and secure infrastructure for a serv
 
 ## **Table of Contents**
 
-1. [Overview](#Overview)
-2. [Architecture Diagram](#Architecture Diagram)
-3. [Skills and Technologies]()
-4. [Prerequisites]()
-5. [Setup Instructions]()
-6. [Project Features]()
-7. [Challenges and Solutions]()
-8. [Outcomes and Key Learnings]()
-9. [Future Improvements]()
-10. [References]()
+1. [Overview](#overview)
+2. [Architecture Diagram](#architecture-diagram)
+3. [Skills and Technologies](#skills-and-technologies)
+4. [Prerequisites](#prerequisites)
+5. [Setup Instructions](#setup-instructions)
+6. [Project Features](#project-features)
+7. [Challenges and Solutions](#challenges-and-solutions)
+8. [Outcomes and Key Learnings](#outcomes-and-key-learnings)
+9. [Future Improvements](#future-improvements)
+10. [References](#references)
 
 ---
 ## **Overview**
@@ -190,4 +190,5 @@ Example:
     ```
     
 - **Monitoring Dashboard**  
-    ![Monitoring Screenshot](https://chatgpt.com/c/link-to-your-dashboard-screenshot.png)
+    
+![Monitoring Screenshot]()
