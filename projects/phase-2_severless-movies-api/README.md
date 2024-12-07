@@ -7,16 +7,16 @@ This project involves setting up a scalable and secure infrastructure for a serv
 
 ## **Table of Contents**
 
-0. [Overview]
-1. [Architecture Diagram]
-2. [Skills and Technologies]
-3. [Prerequisites]
-4. [Setup Instructions]
-5. [Project Features]
-6. [Challenges and Solutions]
-7. [Outcomes and Key Learnings]
-8. [Future Improvements]
-9. [References]
+1. [Overview]
+2. [Architecture Diagram]
+3. [Skills and Technologies]
+4. [Prerequisites]
+5. [Setup Instructions]
+6. [Project Features]
+7. [Challenges and Solutions]
+8. [Outcomes and Key Learnings]
+9. [Future Improvements]
+10. [References]
 
 ---
 ## **Overview**
