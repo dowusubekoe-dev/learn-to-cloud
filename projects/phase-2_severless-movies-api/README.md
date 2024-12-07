@@ -7,16 +7,16 @@ This project involves setting up a scalable and secure infrastructure for a serv
 
 ## **Table of Contents**
 
-1. [Overview]
-2. [Architecture Diagram]
-3. [Skills and Technologies]
-4. [Prerequisites]
-5. [Setup Instructions]
-6. [Project Features]
-7. [Challenges and Solutions]
-8. [Outcomes and Key Learnings]
-9. [Future Improvements]
-10. [References]
+1. [Overview](#Overview)
+2. [Architecture Diagram](#Architecture Diagram)
+3. [Skills and Technologies]()
+4. [Prerequisites]()
+5. [Setup Instructions]()
+6. [Project Features]()
+7. [Challenges and Solutions]()
+8. [Outcomes and Key Learnings]()
+9. [Future Improvements]()
+10. [References]()
 
 ---
 ## **Overview**
@@ -43,7 +43,7 @@ The main objectives of the project are;
     - S3 Bucket for storage
     - CloudWatch for monitoring
 
-![Architecture Diagram](https://chatgpt.com/c/link-to-your-diagram.png)
+![Architecture Diagram]()
 
 ---
 
