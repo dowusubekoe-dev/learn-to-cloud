@@ -103,13 +103,15 @@ print(len(sentence))  # 13
 
 4. Given the string "Python programming is fun", extract and print the following:
 
-"Python"
-"programming"
-"fun"
+      "Python"
+      
+      "programming"
+      
+      "fun"
 
 5. Write a program to count the number of words in the sentence:
 
-"The quick brown fox jumps over the lazy dog."
+      "The quick brown fox jumps over the lazy dog."
 
 6. Replace all occurrences of "cat" with "dog" in the string "The cat sat on the mat.".
 
