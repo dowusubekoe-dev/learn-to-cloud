@@ -1,14 +1,19 @@
-# Day 1: Getting Started with Python
+# **Day 1: Getting Started with Python**
 
-**Objective**: Set up Python and run a basic script.
 
-Steps:
+## **Objective** 
+
+Set up Python and run a basic script.
+
+
+### Steps:
 
 1. Install Python from [python.org](https://www.python.org/).
 2. Install an IDE like [VS Code](https://code.visualstudio.com/docs/python/python-quick-start) and the Python extension.
 3. Write and execute your first Python script.
 
-**Brief Description**
+
+### **Brief Description**
 
 Python is a versatile and beginner-friendly programming language. On this day, you will learn to install Python, configure a code editor, and write simple programs. By completing this lesson, you’ll have a fully functional Python environment and confidence to execute basic scripts.
 
@@ -36,7 +41,8 @@ echo 'print("Hello, Python!")' > hello.py
 >>> print("Interactive Python Shell")
 ```
 
-**Code Snippets**
+
+### **Code Snippets**
 
 1. Basic Hello World Program:
 
@@ -111,7 +117,7 @@ import math
 print(math.sqrt(16))  # Prints the square root of 16
 ```
 
-**Exercises**
+### **Exercises**
 
 1. Write a script that:
 
