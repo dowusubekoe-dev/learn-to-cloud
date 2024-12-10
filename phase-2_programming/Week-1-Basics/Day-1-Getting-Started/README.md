@@ -5,7 +5,7 @@
 Steps:
 
 1. Install Python from [python.org](https://www.python.org/).
-2. Install an IDE like VS Code and the Python extension.
+2. Install an IDE like [VS Code](https://code.visualstudio.com/docs/python/python-quick-start) and the Python extension.
 3. Write and execute your first Python script.
 
 **Python Environment Check**:
