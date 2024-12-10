@@ -1,79 +1,69 @@
-# Setting Up Your Python Environment
+# Learn Python with Hands-on Projects in 30 Days
 
-## Python Crush Course
+This repository provides a structured, beginner-friendly Python learning plan with practical projects and code exercises. It’s designed for anyone who wants to quickly grasp Python concepts and build real-world applications.
 
+---
 
-### [Part I: Basics](./phase-2_programming/python-crush-course/)
+## **Course Outline**
 
-#### Why Python?
-Python is easy to learn and use, making it great for beginners.
-It's widely used in the IT industry for various tasks, from automation to data analysis.
+### Week 1: Basics
+- [Day 1: Getting Started](./Week-1-Basics/Day-1-Getting-Started/)
+- [Day 2: Variables and Data Types](./Week-1-Basics/Day-2-Variables-and-DataTypes/)
+- [Day 3: Strings](./Week-1-Basics/Day-3-Strings/)
+- [Day 4: Numbers and Arithmetic](./Week-1-Basics/Day-4-Numbers-and-Arithmetic/)
+- [Day 5: Comments and Zen](./Week-1-Basics/Day-5-Comments-and-Zen/)
+- [Day 6: Introduction to Lists](./Week-1-Basics/Day-6-Intro-to-Lists/)
+- [Day 7: List Access and Modification](./Week-1-Basics/Day-7-List-Access-and-Modification/)
 
-#### Python's Growth and Resources
-Python has evolved significantly since its release, becoming more powerful and versatile.
-Abundant resources like online courses, documentation, and communities support Python learners.
+### Week 2: Control Flow
+- [Day 8: Organizing Lists](./Week-2-ControlFlow/Day-8-Organizing-Lists/)
+- [Day 9: Looping Through Lists](./Week-2-ControlFlow/Day-9-Looping-Lists/)
+- [Day 10: Tuples](./Week-2-ControlFlow/Day-10-Tuples/)
+- [Day 11: Introduction to Conditional Statements](./Week-2-ControlFlow/Day-11-Conditionals/)
+- [Day 12: Advanced Conditions and Lists](./Week-2-ControlFlow/Day-12-Advanced-Conditions/)
+- [Day 13: Dictionaries](./Week-2-ControlFlow/Day-13-Dictionaries/)
+- [Day 14: Nested Dictionaries](./Week-2-ControlFlow/Day-14-Nested-Dictionaries/)
 
-#### Learning and Support
-Programming involves trial and error, and seeking help is crucial.
-Remember that even experienced programmers rely on resources and collaboration.
+### Week 3: Functions and OOP
+- [Day 15: Functions and Arguments](./Week-3-Functions/Day-15-Functions/)
+- [Day 16: Loops and While Loops](./Week-3-Functions/Day-16-Loops/)
+- [Day 17: Reading and Writing Files](./Week-3-Functions/Day-17-Files/)
+- [Day 18: Exception Handling](./Week-3-Functions/Day-18-Exceptions/)
+- [Day 19: Classes](./Week-3-Functions/Day-19-Classes/)
+- [Day 20: Inheritance](./Week-3-Functions/Day-20-Inheritance/)
+- [Day 21: Basic Game Development](./Week-3-Functions/Day-21-Game/)
 
-#### Python is:
-- a general purpose scripting language;
-- a popular language used to code a variety of applications;
-- a frequently used tool for automation;
-- a cross-platform compatible language;
-- a beginner-friendly language.
+### Week 4: Projects
+- [Day 22: Scoring and Game Features](./Week-4-Projects/Day-22-Scoring/)
+- [Day 23: Data Visualization Basics](./Week-4-Projects/Day-23-Visualization/)
+- [Day 24: Real-World Datasets](./Week-4-Projects/Day-24-Datasets/)
+- [Day 25: APIs and Live Data](./Week-4-Projects/Day-25-APIs/)
+- [Day 26: Django Introduction](./Week-4-Projects/Day-26-Django-Intro/)
+- [Day 27: Django User Accounts](./Week-4-Projects/Day-27-Django-Accounts/)
+- [Day 28: Styling and Deploying Django Apps](./Week-4-Projects/Day-28-Styling/)
+- [Day 29: Review and Recap](./Week-4-Projects/Day-29-Review/)
+- [Day 30: Final Project](./Week-4-Projects/Day-30-Final/)
 
-#### Python is not: 
-- a platform-specific / OS-specific scripting language;
-- a client-side scripting language;
-- a purely object-oriented programming language.
+---
 
-#### Online Interpreters for Learning Python
-- [PythonTutor](https://pythontutor.com/python-compiler.html#mode=edit) 
-- [OnlineGDB](https://www.onlinegdb.com/)
-- [replit](https://replit.com/languages/python3)
-- [tutorialspoint](https://www.tutorialspoint.com/online_python_compiler.php)
+## **Weekly Summaries**
+- [Week 1: Python Basics](./Week-1-Basics/Week-1-Summary.md)
+- [Week 2: Control Flow](./Week-2-ControlFlow/Week-2-Summary.md)
+- [Week 3: Functions and OOP](./Week-3-Functions/Week-3-Summary.md)
+- [Week 4: Real-World Projects](./Week-4-Projects/Week-4-Summary.md)
 
+---
 
-#### Using the VSCode Editor
-VSCode editor is a powerful, professional-quality text editor that is open-source for beginners. Use the link provided below to setup and configure VSCode for Python.
+## **How to Use This Repository**
+1. Start with Week 1 and follow the daily lessons.
+2. Each day contains objectives, lessons, and exercises.
+3. Use the code snippets for hands-on practice.
+4. Review the summaries at the end of each week.
 
-[Python setup on VSCode](https://code.visualstudio.com/docs/python/python-quick-start)
+## License
 
+This repository is licensed under the AGPL 3.0 license. This means that
+you are free to use, share, and modify the content of this repository,
+as long as you provide attribution and make your contributions available
+under the same license.
 
-#### Installing Python on Different Operating Systems
-A good resource to help with the installation of Python on different Operating Systems is the [Chapter-1](https://ehmatthes.github.io/pcc/chapter_01/README.html) of the Python Crush Course git repository.
-
-
-#### Difference between Syntax and Semantic errors in Programming.
-**Syntax - the Rules of the Road**
-
-- In Python, even small typos like a missing bracket or an extra comma can lead to syntax errors, preventing your code from running.
-- Pay close attention to details and be mindful of potential syntax errors like misspellings, incorrect indentations, and mismatched data types.
-
-**Semantics - Ensuring Your Code Does What You Want**
-
-- Semantics deals with the meaning and logic of your code. Even if your code is syntactically correct, it might not produce the desired output if the logic is flawed.
-- Common semantic errors include unintended output due to incorrect code logic and poorly structured code design.
-
-* Syntax errors occur when you violate these rules, like misspelling a word or forgetting a punctuation mark.
-
-* Semantic errors occur when your code is syntactically correct and runs without issues, but it doesn't produce the intended output because of flawed logic.
-
-#### Running the First Python Program To Test Python Environment
-1. Create a directory for all the Python projects/code in any directory or drive of your choice.
-
-```bash
-mkdir "python-crush-course"
-```
-2. Navigate to the **python-crush-course** directory.
-
-```bash
-cd "python-crush-course"
-```
-3. Create a file with the name **hello_world.py** and add the code below.
-
-```bash
-print("Hello Python World!")
-```
