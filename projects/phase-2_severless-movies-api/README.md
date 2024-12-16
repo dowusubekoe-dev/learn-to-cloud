@@ -86,109 +86,24 @@ Set up AWS credentials for Terraform or AWS CLI:
 ```bash
 aws configure
 ```
+Enter the information for **AWS Access Key ID**, **AWS Secret Access Key**, **Default region name**, and **Default output format**
+
+```bash
+AWS Access Key ID : [****************MUG3B]
+AWS Secret Access Key : [****************jKb9]
+Default region name : [us-east-1]
+Default output format : [json]
+```
 
 ### **Step 3: Deploy Infrastructure**
 
 #### **Using Terraform**:
+
+**Note**: *Edit the resource for the S3 bucket name and make sure to update the name through the code*
 
 ```bash
 terraform init
 terraform apply
 ```
 
-#### **Using CloudFormation**:
 
-```bash
-aws cloudformation deploy --template-file template.yaml --stack-name project-stack
-```
-
-### **Step 4: Deploy Serverless Functions**
-
-Package and upload Lambda functions:
-
-```bash
-cd lambda_functions
-zip get_movies.zip get_movies.py
-aws lambda update-function-code --function-name getMovies --zip-file fileb://get_movies.zip
-```
-
----
-
-## **Project Features**
-
-Describe the features and functionality of the project in detail.
-
-1. **Infrastructure as Code**:
-    - Provisioned resources using Terraform/CloudFormation, ensuring consistency and repeatability.
-2. **Serverless Architecture**:
-    - APIs powered by AWS Lambda for dynamic content delivery.
-3. **High Availability**:
-    - Resources designed with scalability in mind using DynamoDB and S3.
-4. **Monitoring**:
-    - CloudWatch dashboards for real-time metrics and logging.
-
----
-## **Challenges and Solutions**
-
-Documenting challenges encountered during the project and how you solved them highlights your problem-solving skills.
-
-|**Challenge**|**Solution**|
-|---|---|
-|Configuring API Gateway with custom domains was complex.|Researched AWS documentation and tutorials to configure API Gateway with Route 53.|
-|DynamoDB query for sorting movies by year was returning inconsistent results.|Optimized queries using DynamoDB Global Secondary Indexes (GSIs) for efficient sorting.|
-|Debugging Lambda cold start delays.|Utilized provisioned concurrency to minimize cold start latency for Lambda functions.|
-|Managing IaC dependencies between resources.|Used Terraform’s `depends_on` attribute to enforce proper deployment order.|
-
----
-## **Outcomes and Key Learnings**
-
-Summarize what you accomplished and learned during the project.
-
-- Successfully deployed a fully automated, scalable, and secure infrastructure.
-- Improved skills in Terraform for managing AWS resources.
-- Gained hands-on experience in building and deploying serverless applications.
-
----
-
-## **Future Improvements**
-
-Outline areas where the project can be enhanced. This shows foresight and continuous learning.
-
-- Implement authentication and authorization (e.g., AWS Cognito).
-- Integrate a CI/CD pipeline for automated deployments.
-- Add cost-optimization strategies (e.g., reserved instances, lifecycle policies).
-
----
-
-## **References**
-
-Provide links to external resources, tutorials, or official documentation used in the project.
-
-- [AWS Lambda Documentation](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html)
-- [Terraform AWS Provider](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
-- [Serverless Framework](https://www.serverless.com/)
-
----
-
-## **Example Outputs**
-
-Showcase screenshots or API responses for the deployed project to give recruiters a glimpse of the functionality.
-
-Example:
-
-- **GET /movies**
-    
-    ```json
-    [
-      {
-        "id": "1",
-        "title": "Inception",
-        "release_year": 2010,
-        "cover_image": "https://serverless-movies-api-covers.s3.amazonaws.com/inception.jpg"
-      }
-    ]
-    ```
-    
-- **Monitoring Dashboard**  
-    
-![Monitoring Screenshot]()
