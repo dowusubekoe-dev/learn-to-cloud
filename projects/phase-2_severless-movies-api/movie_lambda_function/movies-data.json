@@ -1,0 +1,63 @@
+[
+  {
+    "MovieID": "001",
+    "Title": "Inception",
+    "Genre": "Sci-Fi",
+    "CoverImage": "inception.jpg"
+  },
+  {
+    "MovieID": "002",
+    "Title": "The Matrix",
+    "Genre": "Action",
+    "CoverImage": "matrix.jpg"
+  },
+  {
+    "MovieID": "003",
+    "Title": "Dark Night",
+    "Genre": "Sci-Fi",
+    "CoverImage": "dark_knight.jpg"
+  },
+  {
+    "MovieID": "004",
+    "Title": "Forest Gump ",
+    "Genre": "Drama",
+    "CoverImage": "forrest_gump.jpg"
+  },
+  {
+    "MovieID": "005",
+    "Title": "Gladiator",
+    "Genre": "Action",
+    "CoverImage": "gladiator.jpg"
+  },
+  {
+    "MovieID": "006",
+    "Title": "Titanic",
+    "Genre": "Romance",
+    "CoverImage": "titanic.jpg"
+  },
+  {
+    "MovieID": "007",
+    "Title": "Avatar",
+    "Genre": "Sci-Fi",
+    "CoverImage": "avatar.jpg"
+  },
+  {
+    "MovieID": "008",
+    "Title": "Avengers: Endgame",
+    "Genre": "Action",
+    "CoverImage": "avengers_endgame.jpg"
+  },
+  {
+    "MovieID": "009",
+    "Title": "Pulp Fiction",
+    "Genre": "Crime",
+    "CoverImage": "pulp_fiction.jpg"
+  },
+  {
+    "MovieID": "010",
+    "Title": "The Godfather",
+    "Genre": "Crime",
+    "CoverImage": "godfather.jpg"
+  }
+  
+]
