@@ -43,7 +43,7 @@ The main objectives of the project are;
     - S3 Bucket for storage
     - CloudWatch for monitoring
 
-![Architecture Diagram](/home/dorbsyfx-iac-svr/my_journal/devops-job_oriented-roadmap/projects/phase-2_severless-movies-api/architecture-diagram/architecture_serverless-movie.drawio.png)
+![Architecture Diagram](../phase-2_severless-movies-api/architecture-diagram/architecture_serverless-movie.drawio.png)
 
 ---
 
