@@ -7,5 +7,6 @@
 
 ### [Phase 1:- Linux and Bash](./phase-1_linux-and-bash)
 * [Version Control](./phase-1_linux-and-bash/1%20-%20version-control/)
+* [Cloud CLI Setup](./phase-1_linux-and-bash/2%20-%20cloud-cli-setup/)
 * [Project](./phase-1_linux-and-bash/projects/phase-1_linux-and-bash/aws)
 
