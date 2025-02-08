@@ -52,147 +52,147 @@ For this project, an Ubuntu server will be used as the control machine.
 
 1. Verify HashiCorp's GPG signature and install HashiCorp's Debian package repo
 
-        ```bash
-        sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
-        ```
+```bash
+sudo apt-get update && sudo apt-get install -y gnupg software-properties-common
+```
 
 2. Install the HashiCorp [GPG key](https://apt.releases.hashicorp.com/gpg)
 
-        ```bash
-        wget -O- https://apt.releases.hashicorp.com/gpg | \
-        gpg --dearmor | \
-        sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg > /dev/null
-        ```
+```bash
+wget -O- https://apt.releases.hashicorp.com/gpg | \
+gpg --dearmor | \
+sudo tee /usr/share/keyrings/hashicorp-archive-keyring.gpg > /dev/null
+```
 
 3. Verify the key's fingerprint.
  
-        ```bash
-        gpg --no-default-keyring \
-        --keyring /usr/share/keyrings/hashicorp-archive-keyring.gpg \
-        --fingerprint
-        ```
+```bash
+gpg --no-default-keyring \
+--keyring /usr/share/keyrings/hashicorp-archive-keyring.gpg \
+--fingerprint
+```
 
 4. Add the official HashiCorp repository to your system.
         
-        ```bash
-        echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] \
-        https://apt.releases.hashicorp.com $(lsb_release -cs) main" | \
-        sudo tee /etc/apt/sources.list.d/hashicorp.list
-        ```
+```bash
+echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] \
+https://apt.releases.hashicorp.com $(lsb_release -cs) main" | \
+sudo tee /etc/apt/sources.list.d/hashicorp.list
+```
 
 5. Download the package information from HashiCorp.
 
-        ```bash
-        sudo apt update
-        ```
+```bash
+sudo apt update
+```
 
 6. Install Terraform from the new repository.
 
-        ```bash
-        sudo apt-get install terraform
-        ```
+```bash
+sudo apt-get install terraform
+```
 
 7. Verify that the installation worked
 
-        ```bash
-        terraform -help
-        ```
+```bash
+terraform -help
+```
 
 *Troubleshoot: If you get an error that terraform could not be found, your PATH environment variable was not set up properly. Please go back and ensure that your PATH variable contains the directory where Terraform was installed*
 
 8. Enable tab completion
 
-        ```bash
-        touch ~/.bashrc
-        ```
+```bash
+touch ~/.bashrc
+```
 
-        ```bash
-        terraform -install-autocomplete
-        ```
+```bash
+terraform -install-autocomplete
+```
 
 ## Terraform Basic Commands
 
 1. Initialize the directory
 Initializing a configuration directory downloads and installs the providers defined in the configuration.
 
-        ```hcl
-        terraform init
-        ```
+```tf
+terraform init
+```
 
 2. Format and validate the configuration
 The **terraform fmt** command automatically updates configurations in the current directory for readability and consistency.
 
-        ```hcl
-        terraform fmt
-        ```
+```tf
+terraform fmt
+```
 
 3. Create infrastructure
 Apply the configuration now with the terraform apply command.
 
-        ```hcl
-        terraform apply
-        ```
+```tf
+terraform apply
+```
 
 4. Inspect the current state using 
 
-        ```hcl
-        terraform show
-        ```
+```tf
+terraform show
+```
 
 5. Validate Command
 This command validates the configuration files in a directory. Validate runs checks that verify whether a configuration is syntactically valid and internally consistent, regardless of any provided variables or existing state.
 
-        ```hcl
-        terraform validate
-        ```
+```tf
+terraform validate
+```
 
 6. Plan Your Infrastructure
 Plan will generate an execution plan.
 
-        ```hcl
-        terraform plan
-        ```
+```tf
+terraform plan
+```
 Save the plan file to a given path.
 
-        ```hcl
-        terraform plan -out=<path>
-        ```
+```tf
+terraform plan -out=<path>
+```
 Create a plan to destroy all objects rather than the usual actions.
 
-        ```hcl
-        terraform plan -destroy
-        ```
+```tf
+terraform plan -destroy
+```
 
 7. Deploy Infrastructure
 Create or update infrastructure depending on the configuration files.
 
-        ```hcl
-        terraform apply
-        ```
+```tf
+terraform apply
+```
 Apply changes without having to interactively type ‘yes’ to the plan. Useful in automation CI/CD pipelines.
 
-        ```hcl
-        terraform apply -auto-approve
-        ```
+```tf
+terraform apply -auto-approve
+```
 
 8. Destroy Infrastructure
 Destroy the infrastructure managed by Terraform.
 
-        ```hcl
-        terraform destroy
-        ```
+```tf
+terraform destroy
+```
 Destroy the infrastructure without having to interactively type ‘yes’ to the plan. Useful in automation CI/CD pipelines.
 
-        ```hcl
-        terraform destroy --auto-approve
-        ```
+```tf
+terraform destroy --auto-approve
+```
 
 9. Refresh the State File
 Modify the state file with updated metadata containing information on the resources being managed in Terraform.
 
-        ```hcl
-        terraform refresh
-        ```
+```tf
+terraform refresh
+```
 
 ## Inspect state
 When you applied your configuration, Terraform wrote data into a file called **terraform.tfstate**. Terraform stores the IDs and properties of the resources it manages in this file, so that it can update or destroy those resources going forward. The **state file** must be stored securely and access should be restrict to only trusted team members who need to manage the infrastructure.
