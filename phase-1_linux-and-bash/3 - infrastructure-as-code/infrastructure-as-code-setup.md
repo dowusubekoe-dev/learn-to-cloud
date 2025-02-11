@@ -115,82 +115,82 @@ terraform -install-autocomplete
 1. Initialize the directory
 Initializing a configuration directory downloads and installs the providers defined in the configuration.
 
-```tf
+```hcl
 terraform init
 ```
 
 2. Format and validate the configuration
 The **terraform fmt** command automatically updates configurations in the current directory for readability and consistency.
 
-```tf
+```hcl
 terraform fmt
 ```
 
 3. Create infrastructure
 Apply the configuration now with the terraform apply command.
 
-```tf
+```hcl
 terraform apply
 ```
 
 4. Inspect the current state using 
 
-```tf
+```hcl
 terraform show
 ```
 
 5. Validate Command
 This command validates the configuration files in a directory. Validate runs checks that verify whether a configuration is syntactically valid and internally consistent, regardless of any provided variables or existing state.
 
-```tf
+```hcl
 terraform validate
 ```
 
 6. Plan Your Infrastructure
 Plan will generate an execution plan.
 
-```tf
+```hcl
 terraform plan
 ```
 Save the plan file to a given path.
 
-```tf
+```hcl
 terraform plan -out=<path>
 ```
 Create a plan to destroy all objects rather than the usual actions.
 
-```tf
+```hcl
 terraform plan -destroy
 ```
 
 7. Deploy Infrastructure
 Create or update infrastructure depending on the configuration files.
 
-```tf
+```hcl
 terraform apply
 ```
 Apply changes without having to interactively type ‘yes’ to the plan. Useful in automation CI/CD pipelines.
 
-```tf
+```hcl
 terraform apply -auto-approve
 ```
 
 8. Destroy Infrastructure
 Destroy the infrastructure managed by Terraform.
 
-```tf
+```hcl
 terraform destroy
 ```
 Destroy the infrastructure without having to interactively type ‘yes’ to the plan. Useful in automation CI/CD pipelines.
 
-```tf
+```hcl
 terraform destroy --auto-approve
 ```
 
 9. Refresh the State File
 Modify the state file with updated metadata containing information on the resources being managed in Terraform.
 
-```tf
+```hcl
 terraform refresh
 ```
 
