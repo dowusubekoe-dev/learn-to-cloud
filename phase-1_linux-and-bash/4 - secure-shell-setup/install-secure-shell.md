@@ -38,7 +38,7 @@ Manually copying of the **Public key** can be done by executing this command.
 Ensure that the **~/.ssh** directory exists on the **remote server/host**
 
         ```bash
-        ls -a **~/.ssh**
+        ls -a ~/.ssh
         ```
 Verify the content of the public key **id_rsa.pub**
 
