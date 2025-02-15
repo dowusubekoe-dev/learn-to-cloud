@@ -83,3 +83,62 @@ Restart SSH on the server
         ```bash
         sudo systemctl restart ssh
         ```
+
+# Connecting to a VM via SSH
+
+To SSH into a virtual machine (VM) from your local terminal, follow these steps:
+
+1. **Open your terminal** on your local machine.
+2. **Use the SSH command** to connect to your VM. The basic syntax is:
+    ```bash
+    ssh username@vm_ip_address
+    ```
+   Replace `username` with your VM's username and `vm_ip_address` with the public IP address of your VM.
+
+3. **Accept the SSH key fingerprint** if prompted. This is a security measure to ensure you are connecting to the correct server.
+
+4. **Enter your password** if prompted. If you have set up SSH keys, you may not need to enter a password.
+
+5. Once authenticated, you will have access to the VM's command line interface.
+
+Make sure that your VM is running and that the SSH service is enabled on it.
+
+# How to SSH using SSH keys (not passwords)
+
+Using SSH keys for authentication is a more secure method than using passwords. Here's how to set it up:
+
+1. **Generate SSH keys** on your local machine if you haven't already:
+    ```bash
+    ssh-keygen -b 4096
+    ```
+   Follow the prompts to save the key pair.
+
+2. **Copy the public key** to the remote server:
+    ```bash
+    ssh-copy-id username@remote_host
+    ```
+   Replace `username` with your remote server's username and `remote_host` with its IP address.
+
+3. **Connect to the remote server** using SSH:
+    ```bash
+    ssh username@remote_host
+    ```
+   You should be able to log in without entering a password, as long as your private key is loaded into your SSH agent.
+
+4. **Ensure your SSH agent is running** and your key is added:
+    ```bash
+    eval "$(ssh-agent -s)"
+    ssh-add ~/.ssh/id_rsa
+    ```
+
+5. **Disable password authentication** on the server for added security:
+    - Edit the SSH configuration file:
+        ```bash
+        sudo nano /etc/ssh/sshd_config
+        ```
+    - Set `PasswordAuthentication no` and restart the SSH service:
+        ```bash
+        sudo systemctl restart ssh
+        ```
+
+By following these steps, you can securely SSH into your server using SSH keys instead of passwords.
