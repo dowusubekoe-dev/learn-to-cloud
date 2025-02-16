@@ -18,6 +18,80 @@ Learn how to find hidden files using these commands:
 - **`ls -la`**: Provides a detailed listing of all files, including hidden ones.
 - **`find . -name ".*"`**: Searches for hidden files in the current directory.
 
+### Search Commands
+
+```bash
+# Find all files in current directory and subdirectories
+find . -type f
+
+# Find files containing specific text
+grep -r "CTF{" .
+
+# Find hidden files (they start with .)
+ls -la
+```
+
+### Navigation Commands
+
+```bash
+# Show current directory
+pwd
+
+# List directory contents with details
+ls -l
+
+# Change to home directory
+cd ~
+
+# Move up one directory
+cd ..
+```
+
+### File Reading Commands
+
+```bash
+# View file contents
+cat filename
+
+# View file contents page by page
+less filename
+
+# View first few lines of file
+head filename
+
+# View last few lines of file
+tail filename
+```
+
+### System Information
+
+```bash
+# Show system processes
+ps aux
+
+# Show current user
+whoami
+
+# Show system information
+uname -a
+
+# Show environment variables
+env
+```
+
+### File Permissions and Ownership
+```bash
+# Show file permissions
+ls -l filename
+
+# Change file permissions
+chmod permissions filename
+
+# Change file ownership
+chown user:group filename
+```
+---
+
 ## Challenge 2: File Searching
 
 Master the following commands for searching files:
@@ -26,6 +100,13 @@ Master the following commands for searching files:
 - **`find /path -type f`**: Searches for regular files in the specified path.
 - **`locate filename`**: Quickly searches for files using a pre-built database.
 - **`grep -r "text" /path`**: Recursively searches for specific text within files in the specified path.
+- **`find /path/to/search -name "*secret*"`**: Basic find command - search for files with "secret" in the name
+- **`find /path/to/search -iname "*secret*"`**: Case-insensitive search for files with "secret" in the name
+- **`find /path/to/search -type f -name "*secret*"`**: Search only files (not directories)
+- **`find . -name "*secret*"`**: Search in current directory and subdirectories
+- **`find /home/ctf_user -type f -name "*secret*"`**: Example for Challenge 2 (searching in /home/ctf_user for "secret")
+
+---
 
 ## Challenge 3: File Size Analysis
 
