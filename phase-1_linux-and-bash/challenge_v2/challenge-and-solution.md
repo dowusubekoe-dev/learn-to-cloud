@@ -129,14 +129,12 @@ grep "1002" /etc/passwd # flag_user:x:1002:1002::/home/flag_user:/bin/sh
 ```
 
 ```bash
-grep "CTF{" /home/flag_user/.profile # CTF{user_enumeration_expert}
+sudo grep "CTF{" /home/flag_user/.profile # CTF{user_enumeration_expert}
 ```
 
 ```bash
 verify 4 CTF{user_enumeration_expert} # verify the flag
 ```
-
-
 
 #### Challenge 5: The Permissive File
 
@@ -165,6 +163,8 @@ find / -type f -user root -perm 777 -exec cat {} + # find the file with root own
 ```bash
 verify 5 CTF{permission_sleuth} # verify the flag
 ```
+
+---
 
 ### Advanced Level
 
@@ -298,6 +298,148 @@ grep -r "CTF{" /home/ctf_user/ # CTF{ssh_security_master}
 ```bash
 verify 8 CTF{ssh_security_master} # verify the flag
 ```
+
+#### Challenge 9: DNS troubleshooting
+Someone modified a critical DNS configuration file. Fix it to reveal the flag.
+
+- **Skills**: DNS troubleshooting, file editing
+- **Hint**: Compare the current configuration with its backup to understand what has changed.
+
+##### Solution
+- Identify the DNS Configuration File: The primary DNS configuration file in most Linux distributions is likely located at `/etc/resolv.conf`
+- Command: `ls -l /etc/resolv.conf`
+- Also confirm if it a symlink:- Command: `readlink /etc/resolv.conf`
+- Locate and Examine the Backup: Command: `ls -l /etc/resolv.conf.*`
+- Compare Files: Command (using diff): `diff /etc/resolv.conf /etc/resolv.conf.bak`
+- Command (using vimdiff): `vimdiff /etc/resolv.conf /etc/resolv.conf.bak`
+- Edit and save the changed DNS file
+
+```bash
+verify 9 CTF{dns_name} # verify the flag
+```
+
+#### Challenge 10: Remote upload
+Transfer any file to the ctf_challenges directory to trigger the flag.
+
+- **Skills**: Upload files to remote servers
+- **Hint**: Make use of standard file transfer methods available to you.
+
+##### Solution
+- **scp (Secure Copy)**:
+Description: A command-line tool that securely copies files between hosts using the SSH (Secure Shell) protocol. It encrypts the data transfer. This is the most widely used and often preferred method because of its security.
+
+- **Syntax**:
+Copying from local to remote: scp [options] local_file user@remote_host:remote_directory
+Copying from remote to local: scp [options] user@remote_host:remote_file local_directory
+
+- **Examples**:
+
+`scp myfile.txt user@192.168.1.100:/home/user/documents/` (Copying from local to a remote server)
+
+`scp -r /home/local_user/projects user@remote_host:/opt/backups/` (Copying a directory recursively)
+
+`scp -P 2222 myfile.txt user@remote_host:/tmp/` (Specifying a different SSH port on the remote host)
+
+`scp -i ~/.ssh/id_rsa myfile.txt user@remote_host:/tmp/` (using an ssh key)
+
+##### Solution
+- Navigate to the directory you want to copy file from on the local machine
+- Run the scp command: `scp aws-terraform-kp.pem ctf_user@44.204.170.155:/home/ctf_user/ctf_challenges/`
+
+```bash
+Here is your flag: CTF{network_copy} # A new file named aws-terraform-kp.pem has been added to /home/ctf_user/ctf_challenges.
+```
+```bash
+verify 10 CTF{network_copy}
+```
+
+#### Challenge 11: Web Configuration
+The web server is running on a non-standard port. Find and fix it.
+
+- **Skills**: Nginx configuration, service management
+- **Hint**: Review the web server's configuration files for unusual port assignments and remember to restart the service after making any changes.
+
+##### Solution
+1. Apache HTTP Server:
+Main Configuration File: `/etc/apache2/apache2.conf` (Debian/Ubuntu/Mint) or `/etc/httpd/conf/httpd.conf` (CentOS/RHEL/Fedora, and often also on other distributions)
+Virtual Host Configurations: These files control how Apache serves different websites (or "virtual hosts") on a single server.
+`/etc/apache2/sites-available/` (Debian/Ubuntu/Mint): Contains the virtual host configuration files. These files are typically enabled by creating a symbolic link in `/etc/apache2/sites-enabled/`.
+`/etc/httpd/conf.d/` (CentOS/RHEL/Fedora): Can contain virtual host configurations (often .conf files for individual websites).
+`/etc/httpd/sites-available/` and `/etc/httpd/sites-enabled/` (some CentOS/RHEL/Fedora setups)
+Modules Configuration: `/etc/apache2/mods-available/` and `/etc/apache2/mods-enabled/` (Debian/Ubuntu/Mint) or `/etc/httpd/conf.modules.d/`(CentOS/RHEL/Fedora): Control which Apache modules are loaded.
+
+2. Nginx (Engine X):
+Main Configuration File: `/etc/nginx/nginx.conf`
+Virtual Host Configurations:
+`/etc/nginx/conf.d/` : This is often the primary location for site-specific configuration files. Each .conf file in this directory typically defines a virtual host.
+`/etc/nginx/sites-available/` and `/etc/nginx/sites-enabled/` (less common, but sometimes used like Apache): Similar to Apache, this setup involves creating symbolic links.
+Important Note: With Nginx, the include directive in nginx.conf (or other configuration files) often points to other config files or directories. This means your configuration might be split across multiple files.
+
+- Run command: 
+```bash
+sudo nano /etc/nginx/nginx.conf
+```
+- Locate the server block and update to fix the error
+mail {
+#       # See sample authentication script at:
+#       # http://wiki.nginx.org/ImapAuthenticateWithApachePhpScript
+
+        auth_http localhost/auth.php;
+        pop3_capabilities "TOP" "USER";
+        imap_capabilities "IMAP4rev1" "UIDPLUS";
+
+        server {
+                listen     localhost:110;
+                protocol   pop3;
+                proxy      on;
+        }
+
+        server {
+                listen     localhost:143;
+                protocol   imap;
+                proxy      on;
+        }
+}
+
+- Save the `nginx.conf` file
+- Test the Configuration: `sudo nginx -t`
+- Restart Nginx: `sudo systemctl restart nginx`
+- Check Nginx status: `sudo systemctl status nginx`
+- Verify mail logs: `sudo grep -i "CTF" /var/log/mail.log /var/log/syslog /var/log/daemon.log`
+
+```bash
+/var/log/syslog:Mar  6 03:16:04 ip-10-0-1-81 cloud-init[1181]: <h2 style="text-align:center;">Flag value: CTF{web_config}</h2>
+```
+
+#### Challenge 12: Network Traffic Analysis
+Someone is sending secret messages via ping packets.
+
+- **Skills**: Network dumps, packet inspection, decoding
+- **Hint**: Utilize general network analysis techniques to inspect traffic and search for concealed information.
+
+##### Solution
+- Capture Network Traffic (if not provided) `sudo tcpdump -i any icmp -w icmp_traffic.pcap`
+    - Press Ctrl + C after some time to stop capturing.
+- Install **tshark** `sudo apt install tshark`
+- Inspect the PCAP File Use tshark or Wireshark (CLI-based analysis) to check for ICMP packets: `tshark -r icmp_traffic.pcap | grep ICMP`
+- Look for Unusual Data in ICMP Payloads: `Use tshark to examine payloads`
+
+```bash
+tshark -r icmp_traffic.pcap -Y "icmp" -T fields -e data
+```
+If the output looks encoded, the message may be in ASCII, Base64, or another encoding.
+
+- Extract ICMP Payloads
+If you find hexadecimal data in the output, extract and decode it:
+
+```bash
+tshark -r icmp_traffic.pcap -Y "icmp" -T fields -e data > extracted_data.txt # verify 12 CTF{net_chat} CTF{net_chat} CTF{net_chat} CTF{net_chat}
+```
+- Then, convert hex to ASCII: `cat extracted_data.txt | xxd -r -p`
+
+`If it’s Base64 encoded, decode it: cat extracted_data.txt | base64 -d` # option 2
+
+
 
 
 ## Tips for Success
