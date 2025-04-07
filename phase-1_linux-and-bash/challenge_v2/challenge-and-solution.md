@@ -361,28 +361,49 @@ The web server is running on a non-standard port. Find and fix it.
 
 ##### Solution
 1. Apache HTTP Server:
-Main Configuration File: `/etc/apache2/apache2.conf` (Debian/Ubuntu/Mint) or `/etc/httpd/conf/httpd.conf` (CentOS/RHEL/Fedora, and often also on other distributions)
+
+Main Configuration File: `/etc/apache2/apache2.conf` 
+
+For (Debian/Ubuntu/Mint) or `/etc/httpd/conf/httpd.conf` 
+
+For (CentOS/RHEL/Fedora, and often also on other distributions)
+
+
 Virtual Host Configurations: These files control how Apache serves different websites (or "virtual hosts") on a single server.
+
 `/etc/apache2/sites-available/` (Debian/Ubuntu/Mint): Contains the virtual host configuration files. These files are typically enabled by creating a symbolic link in `/etc/apache2/sites-enabled/`.
+
 `/etc/httpd/conf.d/` (CentOS/RHEL/Fedora): Can contain virtual host configurations (often .conf files for individual websites).
+
 `/etc/httpd/sites-available/` and `/etc/httpd/sites-enabled/` (some CentOS/RHEL/Fedora setups)
-Modules Configuration: `/etc/apache2/mods-available/` and `/etc/apache2/mods-enabled/` (Debian/Ubuntu/Mint) or `/etc/httpd/conf.modules.d/`(CentOS/RHEL/Fedora): Control which Apache modules are loaded.
+
+
+Modules Configuration: `/etc/apache2/mods-available/` and `/etc/apache2/mods-enabled/` 
+
+(Debian/Ubuntu/Mint) or `/etc/httpd/conf.modules.d/`
+
+(CentOS/RHEL/Fedora): Control which Apache modules are loaded.
 
 2. Nginx (Engine X):
 Main Configuration File: `/etc/nginx/nginx.conf`
+
 Virtual Host Configurations:
 `/etc/nginx/conf.d/` : This is often the primary location for site-specific configuration files. Each .conf file in this directory typically defines a virtual host.
+
 `/etc/nginx/sites-available/` and `/etc/nginx/sites-enabled/` (less common, but sometimes used like Apache): Similar to Apache, this setup involves creating symbolic links.
+
 Important Note: With Nginx, the include directive in nginx.conf (or other configuration files) often points to other config files or directories. This means your configuration might be split across multiple files.
 
-- Run command: 
+- Run command:
+ 
 ```bash
 sudo nano /etc/nginx/nginx.conf
 ```
-- Locate the server block and update to fix the error
-mail {
-#       # See sample authentication script at:
-#       # http://wiki.nginx.org/ImapAuthenticateWithApachePhpScript
+- Locate the server block and update to fix the error mail
+
+Sample authentication script can be found on website (http://wiki.nginx.org/ImapAuthenticateWithApachePhpScript)
+
+	{
 
         auth_http localhost/auth.php;
         pop3_capabilities "TOP" "USER";
@@ -399,7 +420,7 @@ mail {
                 protocol   imap;
                 proxy      on;
         }
-}
+	}
 
 - Save the `nginx.conf` file
 - Test the Configuration: `sudo nginx -t`
@@ -440,8 +461,6 @@ tshark -r icmp_traffic.pcap -Y "icmp" -T fields -e data > extracted_data.txt # v
 `If it’s Base64 encoded, decode it: cat extracted_data.txt | base64 -d` # option 2
 
 
-
-
 ## Tips for Success
 
 1. Use `man` pages to understand command options
@@ -449,10 +468,3 @@ tshark -r icmp_traffic.pcap -Y "icmp" -T fields -e data > extracted_data.txt # v
 3. Understand command combinations using pipes
 4. Review basic Linux concepts from Phase 1 Guide
 5. Take notes on new commands you discover
-
-## Author
-
-- LinkedIn: [rishabkumar7](https://linkedin.com/in/rishabkumar7)
-- X/Twitter: [@rishabincloud](https://x.com/rishabincloud)
-
-## [License](LICENSE)
