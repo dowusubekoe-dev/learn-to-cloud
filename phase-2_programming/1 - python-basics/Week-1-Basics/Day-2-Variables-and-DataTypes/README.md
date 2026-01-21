@@ -1,22 +1,18 @@
 # **Day 2: Variables and Data Types**
 
-
 ## **Objective**
 
-Understand variables and explore Python’s basic data types.
+Understand variables and explore Pythonï¿½s basic data types.
 
-
-### **Steps**:
+### **Steps**
 
 Learn the rules for naming variables.
 Explore basic data types: int, float, str, and bool.
 Assign values to variables and manipulate them.
 
-
 ### **Brief Description**
 
 Variables in Python are used to store and manipulate data. Python supports various data types, such as integers, floats, strings, and booleans. This lesson will teach you how to create variables, assign values, and use them in basic operations.
-
 
 ### **Code Snippets**
 
@@ -59,6 +55,7 @@ print(f"The value of PI is {PI}.")
 ```
 
 **Multiple Variable Assignment**:
+
 ```py
 x, y, z = 1, 2, 3
 print(x, y, z)
@@ -98,22 +95,22 @@ print(f"Sum: {a + b}, Difference: {a - b}, Product: {a * b}")
 
 ### **Exercises**
 
-1. Create a variable for each of the following and print them:
+- Create a variable for each of the following and print them:
 
 Your name.
 Your age.
 Your favorite color.
 
-2. Write a program that calculates and prints the area of a rectangle:
+- Write a program that calculates and prints the area of a rectangle:
 
 ```py
 length = 10
 width = 5
 area = length * width
 print(f"The area of the rectangle is {area}.")
-``
+```
 
-3. Write a program to swap the values of two variables:
+- Write a program to swap the values of two variables:
 
 ```py
 x = 5
@@ -122,7 +119,6 @@ x, y = y, x
 print(f"x: {x}, y: {y}")
 ```
 
-4. Define constants for the speed of light (299792458 m/s) and gravitational constant (6.674×10^-11 m^3 kg^-1 s^-2). Print their values.
+- Define constants for the speed of light (299792458 m/s) and gravitational constant (6.674ï¿½10^-11 m^3 kg^-1 s^-2). Print their values.
 
-5. Create a boolean variable and use it in a conditional statement to print a message based on its value.
-
+- Create a boolean variable and use it in a conditional statement to print a message based on its value.

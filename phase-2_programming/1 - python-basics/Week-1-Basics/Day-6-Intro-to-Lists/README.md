@@ -1,10 +1,8 @@
 # **Day 6: Introduction to Lists**
 
-
 ## **Objective**
 
 Understand Python lists, their properties, and basic operations to store and manipulate collections of data.
-
 
 ### **Steps**:
 
@@ -12,11 +10,9 @@ Understand Python lists, their properties, and basic operations to store and man
 2. Access list elements using indices.
 3. Modify, add, and remove elements from lists.
 
-
 ### **Brief Description**
 
 Lists are ordered collections of items in Python, used to store multiple values in a single variable. This lesson will cover creating lists, accessing individual items, and using basic list methods for modification.
-
 
 ### **Code Snippets**
 
@@ -90,14 +86,13 @@ print("apple" in fruits)  # True
 print("mango" in fruits)  # False
 ```
 
-
 ### **Exercises**
 
-1. Create a list of your favorite movies and print the first and last movies in the list.
+- Create a list of your favorite movies and print the first and last movies in the list.
 
-2. Add two more movies to your list and then remove one of them.
+- Add two more movies to your list and then remove one of them.
 
-3. Write a program to store the names of three friends in a list and print a message for each friend, such as:
+- Write a program to store the names of three friends in a list and print a message for each friend, such as:
 
 ```py
 friends = ["Alice", "Bob", "Charlie"]
@@ -105,10 +100,10 @@ for friend in friends:
     print(f"Hello, {friend}! How are you?")
 ```
 
-4. Create a list of numbers and print:
+- Create a list of numbers and print:
 
-    - The entire list.
-    - The first three numbers.
-    - The last two numbers.
-    
-5. Check if the number 5 is in your list of numbers and print an appropriate message.
+The entire list.
+The first three numbers.
+The last two numbers.
+
+- Check if the number 5 is in your list of numbers and print an appropriate message.

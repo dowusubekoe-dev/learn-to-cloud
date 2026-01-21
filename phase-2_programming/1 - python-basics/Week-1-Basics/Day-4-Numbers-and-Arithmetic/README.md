@@ -1,10 +1,8 @@
 # **Day 4: Numbers and Arithmetic**
 
-
 ## **Objective**
 
 Understand Python's number types and perform arithmetic operations.
-
 
 ### **Steps**:
 
@@ -12,11 +10,9 @@ Understand Python's number types and perform arithmetic operations.
 2. Perform basic arithmetic operations.
 3. Explore mathematical functions using the math module.
 
-
 ### **Brief Description**
 
 Python supports both integers and floating-point numbers. Arithmetic operations such as addition, subtraction, multiplication, and division are essential for programming. Python also provides built-in and module-based functions for advanced calculations.
-
 
 ### **Code Snippets**
 

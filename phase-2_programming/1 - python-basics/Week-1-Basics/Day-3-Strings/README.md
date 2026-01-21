@@ -1,10 +1,8 @@
 # **Day 3: Strings**
 
-
 ## **Objective**
 
 Learn to manipulate and process text data using Python strings.
-
 
 ### **Steps**:
 
@@ -12,11 +10,9 @@ Explore basic string operations like concatenation and slicing.
 Use string methods to modify and analyze text.
 Format strings using f-strings.
 
-
 ### **Brief Description**
 
 Strings are sequences of characters used to store and manipulate text. Python provides several built-in methods and operations for processing strings, including formatting, slicing, and case conversion. This lesson will cover the essentials of working with text in Python.
-
 
 ### **Code Snippets**
 
@@ -104,9 +100,9 @@ print(len(sentence))  # 13
 4. Given the string "Python programming is fun", extract and print the following:
 
       "Python"
-      
+
       "programming"
-      
+
       "fun"
 
 5. Write a program to count the number of words in the sentence:
@@ -116,4 +112,3 @@ print(len(sentence))  # 13
 6. Replace all occurrences of "cat" with "dog" in the string "The cat sat on the mat.".
 
 7. Check if the word "Python" is in the sentence "Learning Python is great!". Print the result.
-

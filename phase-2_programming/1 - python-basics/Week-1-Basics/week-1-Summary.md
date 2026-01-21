@@ -10,4 +10,4 @@ The spotlight on **Day 4** shifts to numbers and arithmetic. You work with integ
 
 **Day 5** introduces comments and Python's design philosophy, "The Zen of Python." You learn to document your code effectively and embrace simplicity and readability.
 
-Finally, **Days 6 and 7** explore lists, Python's powerful data structure for handling collections. You practice creating, modifying, sorting, and iterating through lists. By the end of Week 1, you’re equipped with essential tools to write and manage Python programs confidently.
+Finally, **Days 6 and 7** explore lists, Python's powerful data structure for handling collections. You practice creating, modifying, sorting, and iterating through lists. By the end of Week 1, you're equipped with essential tools to write and manage Python programs confidently.

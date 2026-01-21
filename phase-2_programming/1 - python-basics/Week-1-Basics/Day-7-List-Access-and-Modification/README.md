@@ -94,7 +94,6 @@ numbers.clear()
 print(numbers)  # []
 ```
 
-
 ### **Exercises**
 
 1. Create a list of numbers and:
@@ -109,11 +108,11 @@ print(numbers)  # []
       - Creates a sorted copy of the combined list.
       - Iterate through a list of cities and print a message for each city:
 
-```py
-cities = ["New York", "London", "Paris"]
-for city in cities:
-    print(f"I want to visit {city}.")
-```
+      ```py
+      cities = ["New York", "London", "Paris"]
+      for city in cities:
+      print(f"I want to visit {city}.")
+      ```
 
 4. Find the maximum, minimum, and sum of a list of numbers.
 
