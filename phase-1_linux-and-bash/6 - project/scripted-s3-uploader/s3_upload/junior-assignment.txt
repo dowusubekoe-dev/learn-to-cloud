@@ -1,0 +1,31 @@
+A teacher has created a program of mathematical games for her students.
+Part of the pseudocode for the 'Number pattern' game is given in Figure 5.
+The logic of the pseudocode is tested using a dry run below.
+
+start=4
+2 OUTPUT (start)
+3 FOR counter = 1 to 6 STEP 2
+4 start=start+counter
+5 OUTPUT(start)
+6 END FOR
+7 OUTPUT(“end”)
+
+Complete the 'shaded' cells in the trace table to show how the variables would change if the pseudocode
+was run as program code.
+
+
+| line | start | counter | output |
+|------|-------|---------|--------|
+| 1    |       |         |        |
+| 2    |shaded |         |  4     |
+| 3    |       |shaded   |        |
+| 4    | 5     |         |        |
+| 5    |       |         |  5     |
+|shaded|       | 3       |        |
+| 4    | 8     |         |  8     |
+| 5    |       |         |        |
+| 3    |       | 5       |        |
+| 4    |shaded |         |  13    |
+| 5    |       |         |        |
+| 6    |       |         |        |
+| 7    |       |         | end    |
