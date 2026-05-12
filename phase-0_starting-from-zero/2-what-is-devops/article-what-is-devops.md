@@ -25,6 +25,8 @@ DevOps combines development and operations practices to improve software deliver
 2. **Quality:** Consciousness on the quality or what is delivered to the public or customer. Digital reputation.
 
 ## Use Cases
-- **Optimize Core:**
-- **Unlock Legacy:**
-- **Unleash Digital:**
+- **Optimize Core:** Improve the systems and applications that already support the business. DevOps helps teams release bug fixes, performance improvements, and reliability updates faster while keeping production stable.
+
+- **Unlock Legacy:** Modernize older applications and infrastructure without replacing everything at once. Teams can use automation, infrastructure as code, CI/CD pipelines, and monitoring to make legacy systems easier to maintain and improve.
+
+- **Unleash Digital:** Build and release new digital products, features, and customer experiences quickly. DevOps supports faster experimentation, continuous feedback, and frequent delivery so teams can learn what users need and improve over time.
